@@ -15,5 +15,5 @@ wordcounts = words.map(lambda x: (x,1)).reduceByKey(lambda x,y: x+y)
 
 
 
-for word, count in wordcounts.collect().items():
+for word, count in wordcounts.collect():
   print("{0} {1}".format(word,count))
