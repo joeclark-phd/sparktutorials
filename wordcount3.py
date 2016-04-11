@@ -13,7 +13,7 @@ rddlocal = sc.textFile('file:///home/cloudera/sparktutorials/frost.txt')
 words = rddlocal.flatMap( normalizeWords )
 wordcounts = words.map(lambda x: (x,1)).reduceByKey(lambda x,y: x+y)
 
-print(wordcounts.collect())
 
-#for word, count in wordcounts.items():
-#  print("{0} {1}".format(word,count))
+
+for word, count in wordcounts.items():
+  print("{0} {1}".format(word,count))
