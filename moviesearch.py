@@ -10,7 +10,7 @@ titles = source_file.map(lambda line: line.split("|")[1])
 
 if len(sys.argv) == 2:
   search_term = sys.argv[1]
-else
+else:
   search_term = "gold"
   
 requested_movie = sc.broadcast(search_term)
